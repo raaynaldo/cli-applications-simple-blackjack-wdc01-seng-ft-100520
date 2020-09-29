@@ -22,7 +22,12 @@ end
 
 def get_user_input
   # code #get_user_input here
+<<<<<<< HEAD
   gets
+=======
+  a = gets
+  puts "gets : " + a
+>>>>>>> eb077a621e938eda5977d92e0639974895c9a780
 end
 
 def end_game(number)
@@ -41,6 +46,7 @@ def hit?(number)
   # code hit? here
   prompt_user()
   input = get_user_input()
+<<<<<<< HEAD
   card = number
   if input.chr == "h"
     card+=deal_card()
@@ -52,6 +58,20 @@ def hit?(number)
     # prompt_user()
     # input = get_user_input()
     hit?(number)
+=======
+  puts "input : " + input
+  card = number
+  if input == "h"
+    card+=deal_card()
+    return card
+  elsif input == "s"
+    return card
+  else
+    invalid_command()
+    prompt_user()
+    input = get_user_input()
+    # hit?(number)
+>>>>>>> eb077a621e938eda5977d92e0639974895c9a780
   end
 end
 
@@ -68,6 +88,7 @@ def runner
   # code runner here
   welcome()
   card = initial_round()
+<<<<<<< HEAD
   until card > 21 do
     card = hit?(card)
     display_card_total(card)
@@ -76,3 +97,13 @@ def runner
 end
 
 # runner()
+=======
+  until  card > 21 do
+    card = hit?(card)
+    # display_card_total(card)
+  end
+  # end_game(card)
+end
+
+runner()
+>>>>>>> eb077a621e938eda5977d92e0639974895c9a780
